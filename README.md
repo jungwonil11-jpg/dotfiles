@@ -1,28 +1,47 @@
-# dotfiles
+# claude-config
 
-Claude Code 글로벌 커맨드 모음. 새 컴퓨터에서 셋업하면 모든 프로젝트에서 `/강사싱크`, `/시작`, `/노션메모`, `/노션정리`, `/푸쉬` 사용 가능.
+Claude Code 글로벌 skill 모음. 새 컴퓨터에서 셋업하면 모든 프로젝트에서 `/강사싱크`, `/시작`, `/노션메모`, `/노션정리`, `/푸쉬` 사용 가능.
 
 ---
 
 ## 새 컴퓨터 셋업 (한 번만)
 
 ```powershell
-git clone https://github.com/jungwonil11-jpg/dotfiles
-cd dotfiles
+git clone https://github.com/jungwonil11-jpg/claude-config
+cd claude-config
 .\setup.ps1
 ```
 
+레포 업데이트 후에도 `.\setup.ps1` 다시 실행하면 최신 skill로 갱신됨.
+
 ---
 
-## 커맨드 목록
+## Skill 목록
 
-| 커맨드 | 설명 |
+| Skill | 설명 |
 |--------|------|
 | `/강사싱크` | 수업 끝난 직후 실행. 강사 코드를 main에 미러링하고 study에 머지. |
 | `/시작` | 다른 컴퓨터에서 자습 시작 전 실행. study 브랜치를 최신 상태로 동기화. |
 | `/노션메모` | 직전 대화에서 설명한 내용을 노션 학습 노트에 추가. |
 | `/노션정리` | 프로젝트 전체를 파악해 노션을 동기화. 처음 실행 시 CLAUDE.md에 정리 방식 자동 기록. |
 | `/푸쉬` | 현재 브랜치를 origin에 push. fetch → 충돌 분석 → 사용자 결정 → push. |
+
+---
+
+## 특정 프로젝트에서 skill 끄기
+
+수업용 skill(`/강사싱크`, `/시작`)이 일반 프로젝트 메뉴에 뜨는 게 싫으면, 그 프로젝트에 `.claude/settings.local.json` 추가:
+
+```json
+{
+  "skillOverrides": {
+    "강사싱크": "off",
+    "시작": "off"
+  }
+}
+```
+
+`.local.json` 은 보통 gitignore 되므로 팀원에게는 안 보이고 본인 PC에만 적용됨.
 
 ---
 

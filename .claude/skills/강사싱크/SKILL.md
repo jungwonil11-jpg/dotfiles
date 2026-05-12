@@ -1,3 +1,8 @@
+---
+name: 강사싱크
+description: 수업 끝난 직후 실행. 강사 upstream 코드를 main에 미러링하고 study 브랜치에 머지한다.
+---
+
 # 강사싱크 — 수업 끝난 직후 실행
 
 강사 코드를 main에 미러링하고, study에 머지한다.

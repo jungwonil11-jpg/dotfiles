@@ -1,3 +1,8 @@
+---
+name: 푸쉬
+description: 현재 브랜치를 origin에 push. fetch → 충돌 분석 → 사용자 결정 → push 순으로 진행.
+---
+
 # 푸쉬 — 현재 브랜치를 origin에 push
 
 ## 사전 준비
