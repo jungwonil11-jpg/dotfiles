@@ -21,6 +21,7 @@ cd dotfiles
 | `/강사싱크` | 수업 끝난 직후 실행. 강사 코드를 main에 미러링하고 study에 머지. |
 | `/시작` | 다른 컴퓨터에서 자습 시작 전 실행. study 브랜치를 최신 상태로 동기화. |
 | `/노션추` | 직전 대화에서 설명한 내용을 노션 학습 노트에 추가. |
+| `/푸시` | 현재 브랜치를 origin에 push. fetch → 충돌 분석 → 사용자 결정 → push. |
 
 ---
 
@@ -34,6 +35,20 @@ cd dotfiles
 ```
 
 **2. `/강사싱크` 실행** → CLAUDE.md에서 URL을 읽어 upstream 자동 등록
+
+---
+
+## 팀 프로젝트에서 /푸시 사용할 때
+
+프로젝트 `CLAUDE.md`에 아래 두 줄 추가:
+
+```markdown
+## 브랜치 정보
+- my-branch: 내브랜치명
+- integration-branch: dev
+```
+
+`/푸시` 실행 시 CLAUDE.md에서 자동으로 읽어옴.
 
 ---
 
